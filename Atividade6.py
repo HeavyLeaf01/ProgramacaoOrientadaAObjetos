@@ -16,4 +16,4 @@ class ClienteNovo:
         if len(listaBrindes) == 0:
             return False
         self.addbrinde = choice(listaBrindes)
-        return True
+            return True
