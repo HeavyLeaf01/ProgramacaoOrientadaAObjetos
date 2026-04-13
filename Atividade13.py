@@ -15,3 +15,4 @@ class Venda:
     def __init__(self, quantidade: int, dataVenda: date):
         self.quantidade = quantidade
         self.datavenda = dataVenda
+        
