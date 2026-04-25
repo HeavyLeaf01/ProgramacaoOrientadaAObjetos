@@ -2,7 +2,6 @@ class Arma:
     def __init__(self, Nome: str, Tipo: str):
         self.Nome = Nome
         self.Tipo = Tipo
-        armaInicial = 'espada de madeira'
 class Personagem:
     def __init__(self, Nome: str, Categoria: str):
         self.Nome = Nome
