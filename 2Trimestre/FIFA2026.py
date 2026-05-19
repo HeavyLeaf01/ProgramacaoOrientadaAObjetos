@@ -4,7 +4,7 @@ import os
 def cadastrarTimes(listaTimes):
     nome = input("Informe o nome do time: ")
     titulos = int(input("Informe a quantidade de títulos mundiais: "))
-    listaTimes += [TIme(nome, titulos)]
+    listaTimes += [Time(nome, titulos)]
     print(f"Time {nome} cadastrado com sucesso! =)")
 
 def cadastrarJogador(listaTimes):
@@ -14,7 +14,7 @@ def cadastrarJogador(listaTimes):
         nome = input("Informe o nome do jogador: ")
         idade = int(input("Informe a idade do jogador: "))
         escalado = False
-        for time in listaTImes:
+        for time in listaTimes:
             resposta = input(f"Incluir {nome} no time {time.nome}? (s/n) ")
             if resposta == "s":
                 time.addJogador(nome, idade)
@@ -42,11 +42,13 @@ while True:
     print("   (03) Exibir times cadastrados")
     print("   (10) Sair")
 
-    opcao = int(input("    Informe a opção desejando: "))
+    opcao = int(input("    Informe a opção desejada: "))
     if opcao == 1:
         cadastrarTimes(listaTimes)
     elif opcao == 2:
         cadastrarJogador(listaTimes)
+    elif opcao == 3:
+        exibirTimescadastrados(listaTime)
     elif opcao == 10:
         break
     else:
