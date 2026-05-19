@@ -19,3 +19,5 @@ class Time:
             self.listaJogadores += [Jogador(nome, idade)]
         else:
             print("Time completo já.")
+    def aptoJogo(self):
+        return len(self.listaJogadores) == 11
