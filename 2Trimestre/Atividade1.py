@@ -21,3 +21,12 @@ class Time:
             print("Time completo já.")
     def aptoJogo(self):
         return len(self.listaJogadores) == 11
+    def experiencia(self):
+        if len(self.listaJogadores) > 0:
+            maduros = 0
+            for jogador in self.listaJogadores:
+                if jogador.idade >= 28:
+                    maduros += 1
+            return maduros / len(self.listaJogadores)
+        else:
+            return 0.0
