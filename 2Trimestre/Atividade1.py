@@ -1,9 +1,10 @@
 class Jogador:
-
+    contador = 0
     global BID
     BID = 0
     def __init__(self, nome, idade):
-        BID += 1
+        Jogador.contador += 0
+        BID = Jogador.contador
         self.BID = BID
         self.nome = nome
         self.idade = idade
