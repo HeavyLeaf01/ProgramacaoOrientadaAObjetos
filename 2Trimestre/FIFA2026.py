@@ -1,5 +1,21 @@
 from Atividade1 import *
-import os
+import os,pymysql
+
+
+def conectarBD(sql):
+    conexao = pymysql.connect(host='localhost',
+                              user='root',
+                              password='',
+                              database='WorldCup2026'
+                              charset='utf8mb4',
+                              cursorclass=pymysql.cursors.DictCursor)
+    cursor = conecao.cursor()
+    cursor.execute(sql)
+    conexao.commit()
+    conexao.close
+
+
+
 
 def pesquisarTimes(listaTimes, nome):
     for time in listaTimes:
@@ -48,6 +64,7 @@ def cadastrarJogador(listaTimes):
             escalado = False
             for time in listaTimes:
                 resposta = input(f"Incluir {nome} no time {time.nome}? (s/n) ")
+#linha six seven favor não mexer
                 if resposta == "s":
                     time.addJogador(nome, idade)
                     escalado = True
